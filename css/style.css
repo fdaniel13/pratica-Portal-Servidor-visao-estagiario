@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    
+}
+
+
+.container-principal{
+
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+   
+
+    flex-direction: row;
+   
+}
+
+.container-principal > .menu{
+    min-width:60px;
+    width: 5vw;
+    height: 100vh;
+    background-color: rgb(63, 63, 63);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+.menu >div{
+    height: 10vh;
+    
+    
+   
+    
+
+}
+#logo{
+    border-bottom: 1px;
+    border-style: groove;
+
+}
+
+
+.container-principal > .menu:hover{
+    width: 15vw;
+    
+    background-color: rgb(63, 63, 63);
+
+}
+
+.container-principal > .container-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(235, 240, 240, 0.945);
+    
+ 
+}
+
+.container-content > .name-local{
+    background-color: whitesmoke;
+    height: 10vh;
+    border-bottom: 1px;
+    border-style: groove;
+    border-color: rgb(255, 255, 255);
+    
+}
+
+.container-content > .content{
+    height: 80vh;
+    
+
+    padding: 5vh ;
+
+}
+
+.content > .info{
+    height: 70vh;
+   
+    display: flex;
+    flex-direction: column;
+
+}
+.rodape{
+    margin-top: 5vh;
+    height: 5vh;
+    
+    padding: 1vh;
+}
+
+@media (max-width:600px){
+    .container-principal > .menu{
+        display: none;
+    }
+    
+}
+
+
+.user-Info{
+    margin-top: 10vh;
+    height: 20vh;
+    margin-bottom: 5vh;
+}
+
+
+.user-Cont{
+    
+    height: 15vh;
+}
+.user-Info,.user-Cont{
+    
+
+    border: 1px;
+    border-radius: 5px;
+    border-color: rgb(212, 210, 210);
+    border-style: solid;
+    background-color: whitesmoke;
+    
+
+}
+
+.contaier-folha{
+    display: flex;
+    flex-direction: column;
+}
+.contaier-folha > .menu-contracheque{
+    height: 55vh;
+    width: 20vw;
+    
+    border-right: 1px;
+    border-color: black;
+    border-style: solid;
+}
