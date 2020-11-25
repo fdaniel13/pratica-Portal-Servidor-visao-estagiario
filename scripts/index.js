@@ -1,3 +1,4 @@
-//let userExeb = new UserView();
-//let userControl = new UserController();
+let userExeb = new UserView();
+let userControl = new UserController();
+
 
