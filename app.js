@@ -1,0 +1,39 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const handlebars = require('express-handlebars');
+const { dirname } = require('path');
+
+const app =  express();
+
+//templates 
+//app.engine('handlebars',handlebars( {defaultLayout:'index'} ) );
+app.engine('handlebars',handlebars());
+app.set('view engine','handlebars');
+
+
+//usar arquivos front end
+app.use('/css',express.static(__dirname+'/views/layouts/css'));
+app.use('/scripts',express.static(__dirname+'/views/layouts/scripts'));
+
+
+//Routes and Templates
+
+app.get('/',(req,resp)=>{
+    resp.render('formLoguin',{layout:'loguin'});
+});
+
+app.get('/index',(req,resp)=>{
+
+    //resp.send('pagina inicial');
+    //resp.sendFile(__dirname+'/front-end/index.html');
+    resp.render('telaInicial',{layout:'index'}); //ou resp.render('dadosIniciais',{layout:'nome layout onde vai ser impresso'});
+
+});
+
+
+
+//start server
+app.listen(3000,(req,resp)=>{
+
+    console.log('ok')
+});
