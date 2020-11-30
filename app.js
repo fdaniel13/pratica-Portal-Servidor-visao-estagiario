@@ -12,6 +12,9 @@ const app =  express();
 app.engine('handlebars',handlebars());
 app.set('view engine','handlebars');
 
+//usa o bodyparser pra ler os dados passadoa via formulario usando url 
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 //usar arquivos front end
 app.use('/css',express.static(__dirname+'/views/layouts/css'));

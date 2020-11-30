@@ -12,7 +12,7 @@ routers.get('/',(req,resp)=>{
 );*/
 
 routers.post('/',(req,resp)=>{
-
+    console.log(req.body);
     //resp.send('pagina inicial');
     //resp.sendFile(__dirname+'/front-end/index.html');
     resp.render('index',{layout:'main'}); //ou resp.render('dadosIniciais',{layout:'nome layout onde vai ser impresso'});
