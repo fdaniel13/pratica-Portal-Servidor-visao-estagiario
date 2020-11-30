@@ -6,4 +6,7 @@ routes.get('/',(req,resp)=>{
     resp.render('formLoguin',{layout:'loguin'});
 });
 
+
+
+
 module.exports=routes;
