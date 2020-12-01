@@ -7,6 +7,20 @@ const loguinRoute = require(__dirname+'/routes/loguin.js');
 const userRoute = require(__dirname+('/routes/user.js'));
 const app =  express();
 
+const conn = require(__dirname+'/models/database.js');
+const intern = require(__dirname+'/models/internModel.js');
+
+//database
+ conn
+    .authenticate()
+    .then(()=>{
+        console.log('conexao ok');
+        }
+    )
+    .catch(e=>{
+        console.log(e);
+    });
+
 //templates 
 //app.engine('handlebars',handlebars( {defaultLayout:'index'} ) );
 app.engine('handlebars',handlebars());
@@ -26,20 +40,6 @@ app.use(loguinRoute);
 
 app.use('/user',userRoute);
 
-/*
-app.get('/',(req,resp)=>{
-    resp.render('formLoguin',{layout:'loguin'});
-});
-*/
-/*
-app.get('/user',(req,resp)=>{
-
-    //resp.send('pagina inicial');
-    //resp.sendFile(__dirname+'/front-end/index.html');
-    resp.render('telaInicial',{layout:'index'}); //ou resp.render('dadosIniciais',{layout:'nome layout onde vai ser impresso'});
-
-});
-*/
 
 
 //start server
