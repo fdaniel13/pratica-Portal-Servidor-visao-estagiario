@@ -21,24 +21,26 @@ const Intern = conn.define('interns',{
     });
  
   
-conn.sync();
-module.exports = Intern;  
+//conn.sync();
+ 
    //cria se não existe tabela, force true cria msm existindo(só pra nvl de desenvolvimemto) 
-   //(async()=>{ 
-     //   await conn.sync(
-            /*{
+   (async()=>{ 
+      await conn.sync(
+            {
                 force:true
-            }*/
-       // ).then(()=>{
-         //   console.log('tabale Intern criada');
-           /* Intern.create({
-                name:'Dean',
-                registration:'1'
-            });*/
+            }
+       ).then(()=>{
+            console.log('tabale Intern criada');
+            Intern.create({
+                name:'Dean Winchest Carry on my son',
+                registration:'1192736599666'
+            });
         
             
-        //});
-    //})();
+        });
+    })();
+
+    module.exports = Intern; 
 /*
     (()=>{Intern
     .findAll()
