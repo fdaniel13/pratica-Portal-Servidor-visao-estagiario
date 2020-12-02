@@ -1,4 +1,7 @@
+require('dotenv').config();
+
 module.exports={
-    databaseName:'nomeDoBanco',
-    password:'suaSenha'
+    databaseName:process.env.DATA_BASE_NAME,
+    password:process.env.PASSWORD
 }
+

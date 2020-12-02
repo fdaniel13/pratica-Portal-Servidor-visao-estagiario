@@ -1,5 +1,7 @@
 const express = require('express');
+const intern = require('../models/internModel.js');
 const routers = express.Router();
+
 
 //só pra teste de validação de usuario
 const admin ='admin';
@@ -16,11 +18,19 @@ routers.post('/',adminUser,(req,resp)=>{
 );
 
 routers.get('/index/:id',userId,(req,resp)=>{
-    
-    
+    intern
+            .findAll({raw:true})
+             .then(
+                 (i)=>{
+                    console.log('ini');
+                    
+                    console.log(i);
+                    resp.render('index',{layout:'main',name:i[0].name,matricula:i[0].registration});
+                    console.log('fim');
+              });
     //resp.send('pagina inicial');
     //resp.sendFile(__dirname+'/front-end/index.html');
-    resp.render('index',{layout:'main'}); //ou resp.render('dadosIniciais',{layout:'nome layout onde vai ser impresso'});
+    //ou resp.render('dadosIniciais',{layout:'nome layout onde vai ser impresso'});
 
 }
 );
