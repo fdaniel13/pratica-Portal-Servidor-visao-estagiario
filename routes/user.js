@@ -25,7 +25,7 @@ routers.get('/index/:id',userId,(req,resp)=>{
                     console.log('ini');
                     
                     console.log(i);
-                    resp.render('index',{layout:'main',name:i[0].name,matricula:i[0].registration});
+                    resp.render('dataIni',{layout:'main',name:i[0].name,matricula:i[0].registration});
                     console.log('fim');
               });
     //resp.send('pagina inicial');
@@ -34,6 +34,21 @@ routers.get('/index/:id',userId,(req,resp)=>{
 
 }
 );
+
+
+routers.get("/index/:id/paychequeck",userId,(req,resp)=>{
+    intern
+            .findAll({raw:true})
+             .then(
+                 (i)=>{
+                    console.log('ini');
+                    
+                    console.log(i);
+                    resp.render('paycheck',{layout:'main',name:i[0].name,matricula:i[0].registration});
+                    console.log('fim');
+              });
+       
+});
 
 function userId(req,resp,next){
     

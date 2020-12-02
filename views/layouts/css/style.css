@@ -60,7 +60,7 @@
     flex-direction: column;
     background-color: rgba(235, 240, 240, 0.945);
     
- 
+    min-width: 600px;
 }
 
 .container-content > .name-local{
@@ -73,16 +73,16 @@
 }
 
 .container-content > .content{
-    height: 80vh;
+    height: 85vh;
     
 
-    padding: 5vh ;
+    padding: 0 5vh ;
    
 
 }
 
 .content > .info{
-    height: 70vh;
+    height: 85vh;
    
     display: flex;
     flex-direction: column;
@@ -102,21 +102,22 @@
         display: none;
     }
     
+    
 }
 
 
 .user-Info{
     margin-top: 10vh;
     height: 20vh;
-    margin-bottom: 5vh;
+    
 }
 
 
 .user-Cont{
-    
-    height: 15vh;
+    margin-top: 5vh;
+    height: 17vh;
 }
-.user-Info,.user-Cont{
+.user-Info,.user-Cont,.contaier-folha{
     
 
     border: 1px;
@@ -125,6 +126,7 @@
     border-style: solid;
     background-color: whitesmoke;
 
+    min-width: 540px;
     
     
 
@@ -133,12 +135,30 @@
 .contaier-folha{
     display: flex;
     flex-direction: column;
+    
 }
 .contaier-folha > .menu-contracheque{
     height: 55vh;
     width: 20vw;
     
     border-right: 1px;
-    border-color: black;
+    border-color: rgb(212, 210, 210);
     border-style: solid;
+    
+}
+
+.menu-contracheque >form{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-contracheque >form >[type="button"]{
+    height: 6vh;
+    border: 0.5px;
+    border-color: rgb(212, 210, 210);
+    border-style: solid;
+}
+
+[type="button"]:hover{
+    background-color: rgb(131, 187, 240);
 }
