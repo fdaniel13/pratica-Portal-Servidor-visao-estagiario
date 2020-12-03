@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const conn = require(__dirname+'/database.js');
+//const paycheck = require(__dirname+'/paycheckModel.js');
 
 const Intern = conn.define('interns',{
     name:{ 
@@ -20,8 +21,8 @@ const Intern = conn.define('interns',{
     }
     });
  
-  
-//conn.sync();
+
+    
  
    //cria se não existe tabela, force true cria msm existindo(só pra nvl de desenvolvimemto) 
    (async()=>{ 
@@ -33,7 +34,7 @@ const Intern = conn.define('interns',{
             console.log('tabale Intern criada');
             Intern.create({
                 name:'Dean Winchest Carry on my son',
-                registration:'1192736599666'
+                registration:'119273666'
             });
         
             
@@ -41,12 +42,6 @@ const Intern = conn.define('interns',{
     })();
 
     module.exports = Intern; 
-/*
-    (()=>{Intern
-    .findAll()
-    .then((intern)=>{
-        
-        console.log(intern.dataValues);
-    })})();*/
+
 
     

@@ -11,7 +11,7 @@ const app =  express();
 
 const conn = require(__dirname+'/models/database.js');
 const intern = require(__dirname+'/models/internModel.js');
-
+const paycheck =  require(__dirname+'/models/paycheckModel.js');
 
 
 //database
